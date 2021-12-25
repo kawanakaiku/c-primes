@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-void primes(long n) {
-  long i;
-  long j;
+void primes(long long n) {
+  long long i;
+  long long j;
   bool *numbers = malloc((n+1) * sizeof(bool));
   
   numbers[2] = true;
@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
   if(argc!=2) {
     return 1;
   }
-  long n = atoi(argv[1]);
+  long long n = atoi(argv[1]);
   if(argc<=1) {
     return 1;
   }
