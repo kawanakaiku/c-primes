@@ -5,18 +5,21 @@
 void primes(long long n) {
   long long i;
   long long j;
-  bool *numbers = malloc((n+1) * sizeof(bool));
-  
-  numbers[2] = true;
+  long long x;
+  long long n2 = n/2-1;
+  bool *numbers = malloc(n2 * sizeof(bool));
+
   printf("%d ", 2);
 
-  for(i = 3; i <= n; i+=2) {
+  for(i = 0;i <= n2;i++) {
     if (numbers[i]) { continue; }
-    printf("%ld ", i);
-    for(j = i*2; j <= n; j+=i) {
-      numbers[j] = true;
+    x = i*2+3;
+    printf("%lld ", x);
+    for(j = x*3; j <= n; j+=x*2) {
+      numbers[(j-3)/2] = true;
     }
   }
+
   free(numbers);
   printf("\n");
 }
