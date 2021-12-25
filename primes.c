@@ -6,8 +6,8 @@ void primes(long long n) {
   long long i;
   long long j;
   long long x;
-  long long n2 = n/2-1;
-  bool *numbers = malloc(n2 * sizeof(bool));
+  long long n2 = (n-1)/2 - 1;
+  bool *numbers = malloc((n2+1) * sizeof(bool));
 
   printf("%d ", 2);
 
