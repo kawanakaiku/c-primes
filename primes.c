@@ -15,7 +15,7 @@ void primes(long long n) {
     if (numbers[i]) { continue; }
     x = i*2+3;
     printf("%lld ", x);
-    for(j = x*3; j <= n; j+=x*2) {
+    for(j = x*x; j <= n; j+=x*2) {
       numbers[(j-3)/2] = true;
     }
   }
